@@ -1,0 +1,43 @@
+package ds.dynamicprogramming;
+
+import java.util.Arrays;
+
+public class MakingChange {
+	int optimalChangeCount[];
+	int backtrack[];
+	int denoMinations[];
+
+	public MakingChange(int[] denom) {
+		this.denoMinations = denom;
+		Arrays.sort(denoMinations);
+	}
+
+	public static void main(String[] args) {
+		int denom[] = {1,5,20,25};
+		MakingChange mc = new MakingChange(denom);
+		mc.makeOptimalChange(17);
+		
+	}
+
+	private void makeOptimalChange(int money) {
+		this.optimalChangeCount = new int[money+1];
+		this.backtrack = new int[money+1];
+		for(int i=1;i<=money; i++){
+			for(int j=0; j<denoMinations.length;j++){
+				if(i-denoMinations[j]>=0){
+					int count = optimalChangeCount[i-denoMinations[j]]+1;
+					if(optimalChangeCount[i]==0 || optimalChangeCount[i]>count){
+						optimalChangeCount[i] = count;
+						backtrack[i] = denoMinations[j];
+					}
+				}
+			}
+		}
+		System.out.println("total no of coins: "+ optimalChangeCount[money]);
+		while(money>0){
+			System.out.println(backtrack[money]);
+			money = money-backtrack[money];
+		}
+	}
+
+}

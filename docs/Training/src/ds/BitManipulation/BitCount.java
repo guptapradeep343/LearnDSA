@@ -1,0 +1,22 @@
+package ds.BitManipulation;
+
+public class BitCount {
+
+	public static void main(String[] args) {
+		System.out.println(bitCount(7));
+
+	}
+
+	private static int bitCount(int number) {
+		int count=0; 
+		int i=0;
+		while(i<32){
+			int c = number & 1;
+			if(c==1) count++;
+			number = number >> 1;
+			i++;
+		}
+		return count;
+	}
+
+}

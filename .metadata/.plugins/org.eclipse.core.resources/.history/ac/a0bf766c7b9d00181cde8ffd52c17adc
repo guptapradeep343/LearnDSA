@@ -1,0 +1,18 @@
+package ds.BitManipulation;
+
+public class AdditionSubstraction {
+
+	public static void main(String[] args) {
+		System.out.println(addition(23,24));
+	}
+
+	private static int addition(int a, int b) {
+		while(b!=0){
+			int c = a^b;//XOR different bit results 1
+			int d = a&b<<1;
+			a=c; b=d;
+		}
+		return a;
+	}
+
+}

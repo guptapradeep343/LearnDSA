@@ -1,0 +1,13 @@
+package ds.BitManipulation;
+
+public class AdditionSubstraction {
+
+	public static void main(String[] args) {
+		System.out.println(addition(5,5));
+	}
+
+	private static int addition(int a, int b) {
+		return a&b;
+	}
+
+}

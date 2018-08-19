@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MaxAppleCount.java&apos; to &apos;Training/src/ds.dynamicprogramming&apos;&#x0D;&#x0A;- Original project: &apos;Training&apos;&#x0D;&#x0A;- Destination element: &apos;Training/src/ds.dynamicprogramming&apos;&#x0D;&#x0A;- Original element: &apos;ds.dynamicprogramming.MaxAppleCount.java&apos;" description="Copy compilation unit" destination="/src&lt;ds.dynamicprogramming" element1="/src&lt;ds.dynamicprogramming{MaxAppleCount.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1532966535657" units="1" version="1.0"/>
+</session>
